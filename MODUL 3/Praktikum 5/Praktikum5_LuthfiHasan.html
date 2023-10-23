@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Mahasiswa</title>
+</head>
+<body>
+    <h2>Formulir Registrasi Mahasiswa</h2>
+    <form action="proses.php" method="post" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Nama:</td>
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin:</td>
+                <td>
+                    <input type="radio" name="gender" value="Laki-laki">Laki-laki
+                    <input type="radio" name="gender" value="Perempuan">Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat:</td>
+                <!-- <td><textarea name="alamat" required></textarea></td> -->
+                <td><input type="text" name="nama" required></td>
+            </tr>
+            <tr>
+                <td>Negara:</td>
+                <td>
+                    <select name="negara">
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="Singapura">Singapura</option>
+                        <option value="Malaysia">Malaysia</option>
+                        <option value="Thailand">Thailand</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td>Foto:</td>
+                <td><input type="file" name="photo" accept="image/*" required></td>
+            </tr>
+            <tr>
+                <td>Komentar:</td>
+                <td><textarea name="alamat" required></textarea></td>
+                <!-- <td><input type="text" name="nama" required></td> -->
+            </tr>
+        </table>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
