@@ -1,0 +1,162 @@
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 95px;
+  background: #0C356A;
+  color: #FFF0CE;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nama-kampus{
+  text-align: center;
+}
+.kampus, .prodi{
+  width: 6%;
+  margin: 10px;
+  padding: 5px;
+}
+
+main{
+  width: 70%;
+  height: 430px;
+  background: #dedddab1;
+  padding-left: 30px;
+}
+
+aside{  
+  width: 30%;
+  height: 430px;
+  background: #FFF0CE;
+}
+
+footer{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0C356A;
+}
+
+.social{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  margin-bottom: 3px;
+  margin-left: 25px;
+}
+  
+.social a{
+  color: #F7E6C4;
+  font-size: 1.2rem;
+  border: 1.8px solid #F7E6C4;
+  border-radius: 50%;
+  padding: .35rem;
+  text-align: center;
+  width: 27px;
+  height: 27px;
+}
+  
+.social a:hover{
+  color: #071952;
+  background-color: #F7E6C4;
+  transition: all .3s ease-in-out;
+  box-shadow:  0 0 5px #F7E6C4,
+              0 0 10px #F7E6C4  
+}
+  
+.footer a{
+  color: #000;
+  text-decoration: none;
+}
+    
+.footer a:hover{
+  text-decoration: none;
+}
+    
+.footer .copyright {
+  margin-right: 50px;
+  color:#FFF0CE;
+}
+
+.content{
+  display: flex;
+}
+
+.navbar{
+  overflow: hidden;
+  background-color: #696969;
+  width: 100%;
+  font-weight: 500
+}
+
+.navbar a{
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 6px 7px;
+  text-decoration: none;
+}
+
+.dropdown{
+  float: left;
+  overflow: hidden;
+}
+
+.dropbtn{
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 6px 7px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn{
+  background-color: #2a8bbc;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px #00000004;
+  z-index: 1;
+}
+
+.dropdown-content a{
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display:block;
+  text-align: left;
+}
+
+.dropdown-content a:hover{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+ 
