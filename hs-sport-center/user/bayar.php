@@ -73,13 +73,15 @@ if (isset($_POST["bayar_212279"])) {
   <link rel="stylesheet" href="../style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
 
   <!-- Navbar -->
   <div class="container ">
-    <nav class="navbar fixed-top bg-body-secondary navbar-expand-lg">
+    <nav class="navbar fixed-top bg-danger navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="../kon1.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
@@ -88,21 +90,21 @@ if (isset($_POST["bayar_212279"])) {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
             <li class="nav-item ">
-              <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+              <a class="nav-link active text-white" aria-current="page" href="../index.php">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="lapangan.php">Lapangan</a>
+              <a class="nav-link active text-white" aria-current="page" href="lapangan.php">Lapangan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="bayar.php">Pembayaran</a>
+              <a class="nav-link active text-white" aria-current="page" href="bayar.php">Pembayaran</a>
             </li>
           </ul>
           <?php
           if (isset($_SESSION['id_user'])) {
             // jika user telah login, tampilkan tombol profil dan sembunyikan tombol login
-            echo '<a href="" data-bs-toggle="modal" data-bs-target="#profilModal" class="btn btn-inti"><i data-feather="user"></i></a>';
+            echo '<a href="" data-bs-toggle="modal" data-bs-target="#profilModal" class="btn btn-primary"><i style="font-size : 22px;" class="bi bi-person-circle"></i></a>';
           } else {
             // jika user belum login, tampilkan tombol login dan sembunyikan tombol profil
             echo '<a href="login.php" class="btn btn-inti" type="submit">Login</a>';
@@ -135,7 +137,7 @@ if (isset($_POST["bayar_212279"])) {
                 <p><?= $profil["212279_no_handphone"]; ?></p>
                 <p><?= $profil["212279_alamat"]; ?></p>
                 <a href="../logout.php" class="btn btn-danger">Logout</a>
-                <a href="" data-bs-toggle="modal" data-bs-target="#editProfilModal" class="btn btn-inti">Edit Profil</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#editProfilModal" class="btn btn-primary">Edit Profil</a>
               </div>
             </div>
           </div>
@@ -195,7 +197,7 @@ if (isset($_POST["bayar_212279"])) {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-            <button type="submit" class="btn btn-inti" name="simpan" id="simpan">Simpan</button>
+            <button type="submit" class="btn btn-success" name="simpan" id="simpan">Simpan</button>
           </div>
         </form>
       </div>
@@ -215,7 +217,7 @@ if (isset($_POST["bayar_212279"])) {
               <th scope="col">Nama Lapangan</th>
               <th scope="col">Jam Main</th>
               <th scope="col">Lama Sewa</th>
-              <th scope="col">jam Habis</th>
+              <th scope="col">Jam Habis</th>
               <th scope="col">Total</th>
               <th scope="col">Konfirmasi</th>
             </tr>
@@ -239,8 +241,8 @@ if (isset($_POST["bayar_212279"])) {
                     echo '<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#detailModal' . $row["212279_id_sewa"] . '">Detail</button> ';
                   } else {
                     // tampilkan tombol Detail
-                    echo '<button type="button" class="btn btn-inti" data-bs-toggle="modal" data-bs-target="#bayarModal' . $row["212279_id_sewa"] . '">Bayar</button>
-<a href="" data-bs-toggle="modal" data-bs-target="#hapusModal' . $row["212279_id_sewa"] . '" class="btn btn-danger">Hapus</a>';
+                    echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bayarModal' . $row["212279_id_sewa"] . '"><i class="bi bi-wallet2"></i> Bayar</button>
+<a href="" data-bs-toggle="modal" data-bs-target="#hapusModal' . $row["212279_id_sewa"] . '" class="btn btn-danger"><i class="bi bi-trash"></i> Hapus</a>';
                   }
                   ?>
 
@@ -284,7 +286,7 @@ if (isset($_POST["bayar_212279"])) {
                                 <input type="number" name="total" class="form-control border border-danger" id="exampleInputPassword1" value="<?= $row["212279_total"]; ?>" disabled>
                               </div>
                               <div class="mt-3">
-                                <label for="exampleInputPassword1" class="form-label">Transfer ke : BRI 0892322132 a/n Sport Center</label>
+                                <label for="exampleInputPassword1" class="form-label">Transfer ke : BRI 0892322132 a/n HS Sport Center</label>
                               </div>
                               <div class="mt-3">
                                 <label for="exampleInputPassword1" class="form-label">Upload Bukti</label>
@@ -296,7 +298,7 @@ if (isset($_POST["bayar_212279"])) {
                             <h6 class=" text-center border border-danger">Status : Belum Bayar</h6>
                           </div>
                           <div class="modal-footer">
-                            <button type="submit" class="btn btn-inti" name="bayar_212279" id="bayar_212279">Bayar</button>
+                            <button type="submit" class="btn btn-success" name="bayar_212279" id="bayar_212279">Bayar</button>
                           </div>
                         </form>
                       </div>
@@ -410,22 +412,17 @@ if (isset($_POST["bayar_212279"])) {
   </section>
 
   <!-- footer -->
-  <footer class="fixed-bottom py-3 mt-5">
+  <footer class="bg-danger">
     <div class="social">
-      <a href="#"><i data-feather="instagram"></i></a>
-      <a href="#"><i data-feather="facebook"></i></a>
-      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-whatsapp"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-instagram"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-youtube"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-github"></i></a>
     </div>
 
-    <div class="links">
-      <a href="#home">Home</a>
-      <a href="#about">Lapangan</a>
-      <a href="#menu">Pembayaran</a>
-      <a href="#contact">Kontak</a>
-    </div>
 
-    <div class="credit">
-      <p>Created by <a href="#">MuhammadSurya & NurHalizah</a> &copy; 2023</p>
+    <div class="credit font-monospace fw-bold text-white">
+      <p>Created by Luthfi Hasan | RPL 2022</p>
     </div>
   </footer>
   <!-- End Footer -->

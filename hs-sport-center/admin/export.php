@@ -42,13 +42,13 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa
           <thead class="table-inti">
             <tr>
               <th scope="col">Id</th>
-              <th scope="col">NamaCust</th>
-              <th scope="col">TglPesan</th>
-              <th scope="col">TglMain</th>
+              <th scope="col">Nama Cust.</th>
+              <th scope="col">Tgl Pesan</th>
+              <th scope="col">Tgl Main</th>
               <th scope="col">Lama</th>
               <th scope="col">Total</th>
               <th scope="col">Bukti</th>
-              <th scope="col">Konfir</th>
+              <th scope="col">Konfirmasi</th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -58,8 +58,8 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa
               <tr>
                 <td><?= $i++; ?></td>
                 <td><?= $row["212279_nama_lengkap"]; ?></td>
-<td><?= $row["212279_tanggal_pesan"];?></td>
- <td><?= $row["212279_jam_mulai"]; ?></td>
+                <td><?= $row["212279_tanggal_pesan"];?></td>
+                <td><?= $row["212279_jam_mulai"]; ?></td>
                 <td><?= $row["212279_lama_sewa"]; ?></td>
                 <td><?= $row["212279_total"]; ?></td>
                 <td><img src="../img/<?= $row["212279_bukti"]; ?>" width="100" height="100"></td>

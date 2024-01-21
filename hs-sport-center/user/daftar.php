@@ -25,6 +25,9 @@ if (isset($_POST["daftar"])) {
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Bootstrap Icon -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <style>
     .center {
       position: absolute;
@@ -50,36 +53,51 @@ if (isset($_POST["daftar"])) {
   </style>
 </head>
 
-<body class="login">
-  <div class="center">
+<body class="login bg-warning">
+  <!-- Navbar -->
+  <div class="container">
+    <nav class="navbar fixed-top bg-danger navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="../kon1.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+      </div>
+    </nav>
+  </div>
+  <!-- End Navbar -->
+  <div class="center mt-5" style="background-color : #FEFAE0";>
     <form action="" method="post" enctype="multipart/form-data">
       <h1>Registrasi</h1>
       <div class="row justify-content-center align-items-center">
         <div class="col">
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">Nama Lengkap</label>
             <input type="text" name="nama" class="form-control" id="exampleInputPassword1" required>
           </div>
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">Email</label>
             <input type="email" name="email" class="form-control" id="exampleInputPassword1" required>
           </div>
         </div>
         <div class="col">
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">No Hp</label>
             <input type="text" name="hp" class="form-control" id="exampleInputPassword1" required>
           </div>
-          <div class="mb-3">
+          <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" name="password" class="form-control" id="exampleInputPassword1" required>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="exampleInputPassword1" class="form-label">Alamat</label>
           <input type="text" name="alamat" class="form-control" id="exampleInputPassword1" required>
         </div>
-        <div class="mb-3 d-flex ">
+        <div class="mb-2 d-flex ">
           <p>Jenis Kelamin : </p>
           <div class="form-check mx-3">
             <input class="form-check-input" type="radio" name="gender" id="male" value="Laki-Laki">
@@ -87,20 +105,22 @@ if (isset($_POST["daftar"])) {
               Laki-Laki
             </label>
           </div>
-          <div class="form-check mx-3">
+          <div class="form-check mx-2">
             <input class="form-check-input" type="radio" name="gender" id="female" value="Perempuan">
             <label class="form-check-label" for="female">
               Perempuan
             </label>
           </div>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
           <label for="exampleInputPassword1" class="form-label">Foto</label>
           <input type="file" name="foto" class="form-control" id="exampleInputPassword1" required>
         </div>
-        <div class="mt-3 mb-4">
-          <button class="button btn-inti" name="daftar" id="daftar">Daftar</button>
-        </div>
+
+        <div class="d-flex justify-content-end mt-2 mb-3">
+                <a href="../login.php" class="btn btn-secondary me-2">Kembali</a>
+                <input type="submit" name="daftar" class="btn btn-primary" value="Daftar">
+            </div>
       </div>
     </form>
   </div>

@@ -41,6 +41,9 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa LI
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
 
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
 
@@ -50,26 +53,26 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa LI
 <body>
   <div class="container-fluid">
     <div class="row min-vh-100">
-      <div class="sidebar col-2 bg-secondary">
+      <div class="sidebar col-2 bg-warning">
         <!-- Sidebar -->
         <h5 class="mt-5 judul text-center"><?= $_SESSION["username"]; ?></h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item bg-transparent"><a href="home.php">Home</a></li>
-          <li class="list-group-item bg-transparent"><a href="member.php">Data Member</a></li>
-          <li class="list-group-item bg-transparent"><a href="lapangan.php">Data Lapangan</a></li>
-          <li class="list-group-item bg-transparent"><a href="pesan.php">Data Pesanan</a></li>
-          <li class="list-group-item bg-transparent"><a href="admin.php">Data Admin</a></li>
+          <li class="list-group-item bg-transparent"><a href="home.php"><i class="bi bi-house-fill"></i> Home</a></li>
+          <li class="list-group-item bg-transparent"><a href="admin.php"><i class="bi bi-person-plus-fill"></i> Data Admin</a></li>
+          <li class="list-group-item bg-transparent"><a href="lapangan.php"><i class="bi bi-shop"></i> Data Lapangan</a></li>
+          <li class="list-group-item bg-transparent"><a href="member.php"><i class="bi bi-people-fill"></i> Data Member</a></li>
+          <li class="list-group-item bg-transparent"><a href="pesan.php"><i class="bi bi-bag-check-fill"></i> Data Pesanan</a></li>
           <li class="list-group-item bg-transparent"></li>
         </ul>
-        <a href="../logout.php" class="mt-5 btn btn-inti text-dark">Logout</a>
+        <a href="../logout.php" class="mt-5 btn btn-primary text-white">Logout</a>
       </div>
       <div class="col-10 p-5 mt-5">
         <!-- Konten -->
         <h3 class="judul">Data Pesanan</h3>
         <hr>
-        <a href="export.php" class="btn btn-inti mt-5">Download</a>
+        <a href="export.php" class="btn btn-success mt-3"><i class="bi bi-cloud-arrow-down-fill"></i> Download</a>
         <table class="table table-hover mt-3">
-          <thead class="table-inti">
+          <thead class="table-warning">
             <tr>
               <th scope="col">No</th>
               <th scope="col">NamaCust</th>
@@ -78,7 +81,7 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa LI
               <th scope="col">Lama</th>
               <th scope="col">Total</th>
               <th scope="col">Bukti</th>
-              <th scope="col">Konfir</th>
+              <th scope="col">Konfirmasi</th>
               <th scope="col"></th>
             </tr>
           </thead>

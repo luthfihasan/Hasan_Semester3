@@ -57,32 +57,35 @@ if (isset($_POST["edit"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <title>Data Lapangan</title>
 </head>
 
 <body>
   <div class="container-fluid">
     <div class="row min-vh-100">
-      <div class="sidebar col-2 bg-secondary">
+      <div class="sidebar col-2 bg-warning">
         <!-- Sidebar -->
         <h5 class="mt-5 judul text-center">
           <h5 class="mt-5 judul text-center"><?= $_SESSION["username"]; ?></h5>
         </h5>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item bg-transparent"><a href="home.php">Home</a></li>
-          <li class="list-group-item bg-transparent"><a href="member.php">Data Member</a></li>
-          <li class="list-group-item bg-transparent"><a href="lapangan.php">Data Lapangan</a></li>
-          <li class="list-group-item bg-transparent"><a href="pesan.php">Data Pesanan</a></li>
-          <li class="list-group-item bg-transparent"><a href="admin.php">Data Admin</a></li>
+         <li class="list-group-item bg-transparent"><a href="home.php"><i class="bi bi-house-fill"></i> Home</a></li>
+          <li class="list-group-item bg-transparent"><a href="admin.php"><i class="bi bi-person-plus-fill"></i> Data Admin</a></li>
+          <li class="list-group-item bg-transparent"><a href="lapangan.php"><i class="bi bi-shop"></i> Data Lapangan</a></li>
+          <li class="list-group-item bg-transparent"><a href="member.php"><i class="bi bi-people-fill"></i> Data Member</a></li>
+          <li class="list-group-item bg-transparent"><a href="pesan.php"><i class="bi bi-bag-check-fill"></i> Data Pesanan</a></li>
           <li class="list-group-item bg-transparent"></li>
         </ul>
-        <a href="../logout.php" class="mt-5 btn btn-inti text-dark">Logout</a>
+        <a href="../logout.php" class="mt-5 btn btn-primary text-dark">Logout</a>
       </div>
       <div class="col-10 p-5 mt-5">
         <!-- Konten -->
         <h3 class="judul">Data Lapangan</h3>
         <hr>
-        <button class="btn btn-inti mt-5" data-bs-toggle="modal" data-bs-target="#tambahModal1">Tambah</button>
+        <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#tambahModal1"><i class="bi bi-person-plus"></i> Tambah</button>
         <!-- Modal Tambah -->
         <div class="modal fade" id="tambahModal1" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
@@ -124,7 +127,7 @@ if (isset($_POST["edit"])) {
         <!-- End Modal Tambah -->
 
         <table class="table table-hover mt-3">
-          <thead class="table-inti">
+          <thead class="table-warning">
             <tr>
               <th scope="col">No</th>
               <th scope="col">Nama Lapangan</th>
@@ -145,8 +148,8 @@ if (isset($_POST["edit"])) {
                 <td><?= $row["212279_keterangan"]; ?></td>
                 <td><img src="../img/<?= $row["212279_foto"]; ?>" width="100" height="100"></td>
                 <td>
-                  <button class="btn btn-inti" data-bs-toggle="modal" data-bs-target="#editModal<?= $row["212279_id_lapangan"]; ?>">Edit</button>
-                  <a href="./controller/hapusLpg.php?id=<?= $row["212279_id_lapangan"]; ?>" class="btn btn-danger">Hapus</a>
+                  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?= $row["212279_id_lapangan"]; ?>"><i class='bi bi-pencil'></i> Edit</button>
+                  <a href="./controller/hapusLpg.php?id=<?= $row["212279_id_lapangan"]; ?>" class="btn btn-danger"><i class='bi bi-trash-fill'></i> Hapus</a>
                 </td>
                 <!-- Edit Modal -->
                 <div class="modal fade" id="editModal<?= $row["212279_id_lapangan"]; ?>" tabindex="-1" aria-labelledby="tambahModalLabel" aria-hidden="true">

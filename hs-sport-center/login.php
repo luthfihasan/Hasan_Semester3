@@ -2,7 +2,6 @@
 session_start();
 require "functions.php";
 
-
 if (isset($_SESSION["role"])) {
   $role = $_SESSION["role"];
   if ($role == "Admin") {
@@ -35,8 +34,6 @@ if (isset($_POST["login"])) {
     <meta http-equiv='refresh' content='2'>";
   }
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -56,8 +53,24 @@ if (isset($_POST["login"])) {
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
-<body class="login">
-  <div class="center">
+<body class="login bg-warning">
+  <!-- Navbar -->
+  <div class="container">
+    <nav class="navbar fixed-top bg-danger navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="kon1.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+      </div>
+    </nav>
+  </div>
+  <!-- End Navbar -->
+
+  <div class="center mt-5" style="background-color : #FEFAE0";>
     <h1>Login</h1>
     <form method="POST">
       <div class="mb-3">
@@ -73,6 +86,8 @@ if (isset($_POST["login"])) {
       <div class="signup_link">
         Belum punya akun? <a href="user/daftar.php">Daftar</a>
       </div>
+      <a href="index.php" class="btn btn-secondary position-absolute top-0 end-0 m-3"><i class="bi bi-backspace-fill"></i></a>
+
     </form>
   </div>
 

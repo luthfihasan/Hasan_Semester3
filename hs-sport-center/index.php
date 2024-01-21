@@ -18,20 +18,21 @@ if (isset($_POST["simpan"])) {
           </script>";
   }
 }
-
-
 ?>
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sport Center</title>
+
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -40,7 +41,7 @@ if (isset($_POST["simpan"])) {
     <nav class="navbar fixed-top bg-danger navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="kon1.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
+          <img src="kon1.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top rounded-circle">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -48,10 +49,10 @@ if (isset($_POST["simpan"])) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
             <li class="nav-item ">
-              <a class="nav-link active text-white fw-bold" aria-current="page" href="#home">Beranda</a>
+              <a class="nav-link active text-white fw-bold" aria-current="page" href="#beranda">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active text-white" aria-current="page" href="#about">Tentang</a>
+              <a class="nav-link active text-white" aria-current="page" href="#tentang">Tentang</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active text-white" aria-current="page" href="#bayar">Tata Cara</a>
@@ -60,10 +61,10 @@ if (isset($_POST["simpan"])) {
             if (isset($_SESSION['id_user'])) {
               echo '
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="user/lapangan.php">Lapangan</a>
+              <a class="nav-link active text-white" aria-current="page" href="user/lapangan.php">Lapangan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="user/bayar.php">Pembayaran</a>
+              <a class="nav-link active text-white" aria-current="page" href="user/bayar.php">Pembayaran</a>
             </li>
             ';
             }
@@ -78,7 +79,7 @@ if (isset($_POST["simpan"])) {
             echo '<a href="user/profil.php" data-bs-toggle="modal" data-bs-target="#profilModal" class="btn btn-inti"><i data-feather="user"></i></a>';
           } else {
             // jika user belum login, tampilkan tombol login dan sembunyikan tombol profil
-            echo '<a href="login.php" class="btn btn-primary" type="submit">Login/Masuk</a>';
+            echo '<a href="login.php" class="btn btn-primary" type="submit"><i class="bi bi-box-arrow-in-right"></i> Login</a>';
           }
           ?>
         </div>
@@ -175,51 +176,51 @@ if (isset($_POST["simpan"])) {
     </div>
   </div>
   <!-- End Edit Modal -->
-
-  <!-- Jumbotron -->
-  <section class="jumbotron" id="home">
-    <main class="contain" data-aos="fade-right" data-aos-duration="1000">
-      <h1 class="text-white">Sehatkan Dirimu Dengan Berolahraga di <span>HS Sport</span> Center </h1>
-      <p>
-        Yuk segera Booking disini!
-      </p>
-      <a href="user/lapangan.php" class="btn btn-inti">Booking Sekarang</a>
-    </main>
-  </section>
-  <!-- End Jumbotron -->
+  <div id="beranda" class="container-flui bg-warning pt-5">
+    <section class="text-center">
+      <h1 class="text-white">Sehatkan Dirimu Dengan Berolahraga di <span class="text-dark">HS Sport</span> Center </h1>
+      <h5 class="fw-bold font-monospace mt-4">
+        Yuk Segera Booking Lapangan disini!
+      </h5>
+      <a href="user/lapangan.php" class="btn btn-success mt-4">Sewa Sekarang</a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 310">
+        <path fill="#FEFAE0" fill-opacity="1" d="M0,160L48,160C96,160,192,160,288,176C384,192,480,224,576,202.7C672,181,768,107,864,101.3C960,96,1056,160,1152,176C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+      </svg>
+  </div>
 
   <!-- About -->
-  <section class="about" id="about">
+  <section class="about mb-5" id="tentang">
     <h2 data-aos="fade-down" data-aos-duration="1000">
       <span>Tentang</span> Kami
     </h2>
     <div class="row">
-      <div class="about-img" data-aos="fade-right" data-aos-duration="1000">
+      <div class="about-img img-thumbnail" data-aos="fade-right" data-aos-duration="1000">
         <img src="img/futsal.jpg" alt="" />
       </div>
       <div class="contain" data-aos="fade-left" data-aos-duration="1000">
         <h4 class="text-center mb-3">Kenapa Memilih kami?</h4>
-        <p>Sport Center adalah pusat olahraga yang menyediakan berbagai fasilitas dan layanan penyewaan lapangan untuk berbagai jenis olahraga. Tempat ini dirancang untuk memfasilitasi kegiatan olahraga dan rekreasi bagi individu, kelompok, dan komunitas yang memiliki minat dalam berpartisipasi dalam aktivitas fisik. Sport Center menawarkan beragam jenis lapangan yang dapat disewa untuk berbagai jenis olahraga, seperti sepak bola, futsal, tenis, basket, voli, dan masih banyak lagi. Setiap lapangan dilengkapi dengan fasilitas yang sesuai, termasuk garis-garis permainan, jaring, dan peralatan yang dibutuhkan untuk menjalankan aktivitas olahraga dengan lancar.</p>
+        <p style="font-size: 20px;"> HS Sport Center adalah pusat olahraga yang menyediakan berbagai fasilitas dan layanan penyewaan lapangan untuk berbagai jenis olahraga. Tempat ini dirancang untuk memfasilitasi kegiatan olahraga bagi kelompok dan komunitas yang memiliki minat dalam berpartisipasi dalam aktivitas fisik. HS Sport Center menawarkan beragam jenis lapangan yang dapat disewa untuk berbagai jenis olahraga, seperti Voly, Futsal, Tenis Meja, Basket, dan masih banyak lagi. Setiap lapangan dilengkapi dengan fasilitas yang sesuai, termasuk garis-garis permainan, jaring, dan peralatan yang dibutuhkan untuk menjalankan aktivitas olahraga dengan lancar dan nyaman.</p>
       </div>
     </div>
   </section>
+
   <!-- End About -->
 
   <!-- Pembayaran -->
-  <section class="pembayaran" id="bayar">
+  <section class="pembayaran" style="background-color : #FEFAE0" ; id="bayar">
     <h2 data-aos="fade-down" data-aos-duration="1000">
       <span>Tata Cara</span> Pembayaran
     </h2>
-    <p class="text-center">Berikut adalah tata cara pembayaran lapangan pada website Sport Center:</p>
-    <ul class="border list-group list-group-flush mt-5">
-      <li class="list-group-item">1. Pengguna harus membuat akun atau mendaftar sebagai anggota pada website Sport Center.</li>
-      <li class="list-group-item">2. Pengguna dapat memilih jenis lapangan yang ingin dipesan, memilih tanggal dan waktu tertentu.</li>
-      <li class="list-group-item">3. Pengguna harus memilih tanggal dan waktu, melihat harga sewa lapangan, mengisi jumlah jam atau durasi, melengkapi formulir pemesanan.</li>
+    <p class="text-center">Berikut adalah tata cara penyewaan lapangan pada website HS Sport Center:</p>
+    <ul class="border list-group list-group-flush mt-4 mb-5">
+      <li class="list-group-item">1. Pengguna harus membuat akun atau mendaftar sebagai anggota pada website HS Sport Center.</li>
+      <li class="list-group-item">2. Pengguna dapat memilih Jenis Lapangan yang ingin dipesan, memilih Tanggal dan Waktu Tertentu.</li>
+      <li class="list-group-item">3. Pengguna harus memilih Tanggal dan Waktu, melihat harga sewa lapangan, mengisi jumlah jam atau durasi, melengkapi formulir pemesanan.</li>
       <li class="list-group-item">4. Bila Dirasa sudah sesuai, pengguna dapat meng klik tombol pesan.</li>
       <li class="list-group-item">5. Lalu pengguna akan diarahkan ke menu pembayaran</li>
       <li class="list-group-item">5. Lakukan pembayaran ke rekening yang sudah tertera dan upload bukti pembayaran</li>
-      <li class="list-group-item">5. Setelah upload, tunggu admin menyetujui pembayaran anda</li>
-      <li class="list-group-item">5. Setelah status sudah di setujui, silahkan datang ke Sport Center sesuai jadwal yang di pesan</li>
+      <li class="list-group-item">5. Setelah upload, Tunggu admin menyetujui pembayaran anda</li>
+      <li class="list-group-item">5. Setelah status sudah di setujui, Silahkan datang ke HS Sport Center sesuai jadwal yang di pesan</li>
     </ul>
   </section>
   <!-- End Pembayaran -->
@@ -230,62 +231,51 @@ if (isset($_POST["simpan"])) {
     <p class="text-center m-5">
       Hubungi kami jika ada saran yang ingin di sampaikan
     </p>
-    <div class="row">
-      <div class="col">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d507647.0238694795!2d107.08353226546932!3d-6.264732182087622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69775e79e70e01%3A0x301576d14feb9e0!2sKarawang%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1674768522563!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
-      </div>
-      <div class="col">
-        <form action="">
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i data-feather="user"></i></span>
-            </div>
-            <input type="text" name="" id="" placeholder="nama" class="form-control" />
-          </div>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i data-feather="mail"></i></span>
-            </div>
-            <input type="text" name="" id="" placeholder="email" class="form-control" />
-          </div>
-          <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i data-feather="phone"></i></span>
-            </div>
-            <input type="text" name="" id="" placeholder="no telp" class="form-control" />
-          </div>
-          <button type="submit" class="btn btn-inti mt-3">Kirim Pesan</button>
-        </form>
-      </div>
+    <form>
+    <div class="input-group flex-nowrap mt-4">
+      <span class="input-group-text" id="addon-wrapping"><i class="bi bi-people-fill"></i></span>
+      <input type="text" class="form-control" placeholder="Nama" aria-label="nama" aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group flex-nowrap mt-4">
+      <span class="input-group-text" id="addon-wrapping"><i class="bi bi-envelope-fill"></i></span>
+      <input type="text" class="form-control" placeholder="Email" aria-label="email" aria-describedby="addon-wrapping">
+    </div>
+    <div class="input-group flex-nowrap mt-4">
+      <span class="input-group-text" id="addon-wrapping"><i class="bi bi-telephone-fill"></i></span>
+      <input type="text" class="form-control" placeholder="No Telp" aria-label="no telp" aria-describedby="addon-wrapping">
+    </div>
+    <div class="form-floating mt-4">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <label for="floatingTextarea">Komen</label>
+    </div>
+        <button type="submit" class="btn btn-primary mt-3">Kirim Pesan</button>
+      </form>
+    </div>
     </div>
   </section>
   <!-- End Contact -->
 
   <!-- footer -->
-  <footer>
+  <footer class="bg-danger">
     <div class="social">
-      <a href="#"><i data-feather="instagram"></i></a>
-      <a href="#"><i data-feather="facebook"></i></a>
-      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-whatsapp"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-instagram"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-youtube"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-github"></i></a>
     </div>
 
-    <div class="links">
-      <a href="#home">Home</a>
-      <a href="#about">Lapangan</a>
-      <a href="#menu">Pembayaran</a>
-      <a href="#contact">Kontak</a>
-    </div>
 
-    <div class="credit">
-      <p>Created by <a href="#">Luthfi Hasan | RPL 2022</a></p>
+    <div class="credit font-monospace fw-bold text-white">
+      <p>Created by Luthfi Hasan | RPL 2022</p>
     </div>
   </footer>
   <!-- End Footer -->
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
-  <script>
-    feather.replace();
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
   </script>
+  < script>
+    feather.replace();
+    </script>
 </body>
 
 </html>

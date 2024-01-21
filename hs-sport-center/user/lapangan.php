@@ -37,8 +37,6 @@ if (isset($_POST["pesan"])) {
   }
 }
 
-
-
 ?>
 
 <!doctype html>
@@ -50,13 +48,15 @@ if (isset($_POST["pesan"])) {
   <title>Daftar Lapangan</title>
   <link rel="stylesheet" href="../style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-  <script src="https://unpkg.com/feather-icons"></script>
+  
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 
 <body>
   <!-- Navbar -->
   <div class="container ">
-    <nav class="navbar fixed-top bg-body-secondary navbar-expand-lg">
+    <nav class="navbar fixed-top bg-danger navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand" href="#">
           <img src="../kon1.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-top">
@@ -65,15 +65,15 @@ if (isset($_POST["pesan"])) {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item ">
-              <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-bold">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="../index.php">Beranda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="lapangan.php">Lapangan</a>
+              <a class="nav-link active text-white" aria-current="page" href="lapangan.php">Lapangan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="bayar.php">Pembayaran</a>
+              <a class="nav-link active text-white" aria-current="page" href="bayar.php">Pembayaran</a>
             </li>
           </ul>
           <?php
@@ -183,7 +183,7 @@ if (isset($_POST["pesan"])) {
   <section class="lapangan" id="lapangan">
     <div class="container">
       <main class="contain" data-aos="fade-right" data-aos-duration="1000">
-        <h2 class="text-head">Lapangan di <span>Sport</span> Center </h2>
+        <h2 class="text-head">Lapangan di <span> HS Sport</span> Center </h2>
         <div class="row row-cols-1 row-cols-md-4">
           <?php foreach ($lapangan as $row) : ?>
             <div class="col">
@@ -193,8 +193,7 @@ if (isset($_POST["pesan"])) {
                   <h5 class="card-title"><?= $row["212279_nama"]; ?></h5>
                   <p class="card-text"><?= $row["212279_keterangan"]; ?></p>
                   <p class="card-price"><?= $row["212279_harga"]; ?></p>
-                  <a href="jadwal.php?id=<?= $row["212279_id_lapangan"]; ?>" type="button" class="btn btn-secondary">Jadwal</a>
-                  <button type="button" class="btn btn-inti" data-bs-toggle="modal" data-bs-target="#pesanModal<?= $row["212279_id_lapangan"]; ?>">Pesan</button>
+                  <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#pesanModal<?= $row["212279_id_lapangan"]; ?>">Sewa Lapangan</button>
                 </div>
               </div>
             </div>
@@ -235,7 +234,7 @@ if (isset($_POST["pesan"])) {
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                      <button type="submit" class="btn btn-inti" name="pesan" id="pesan">Pesan</button>
+                      <button type="submit" class="btn btn-success" name="pesan" id="pesan">Pesan</button>
                     </div>
                   </form>
                 </div>
@@ -248,26 +247,22 @@ if (isset($_POST["pesan"])) {
     </div>
   </section>
 
-  <!-- footer -->
-  <footer class="py-3">
+   <!-- footer -->
+   <footer class="bg-danger">
     <div class="social">
-      <a href="#"><i data-feather="instagram"></i></a>
-      <a href="#"><i data-feather="facebook"></i></a>
-      <a href="#"><i data-feather="twitter"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-whatsapp"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-instagram"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-youtube"></i></a>
+      <a href="#" style="font-size: 25px;"><i class="bi bi-github"></i></a>
     </div>
 
-    <div class="links">
-      <a href="#home">Home</a>
-      <a href="#about">Lapangan</a>
-      <a href="#menu">Pembayaran</a>
-      <a href="#contact">Kontak</a>
-    </div>
 
-    <div class="credit">
-      <p>Created by <a href="#">MuhammadSurya & NurHalizah</a> &copy; 2023</p>
+    <div class="credit font-monospace fw-bold text-white">
+      <p>Created by Luthfi Hasan | RPL 2022</p>
     </div>
   </footer>
   <!-- End Footer -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script>
     feather.replace();
