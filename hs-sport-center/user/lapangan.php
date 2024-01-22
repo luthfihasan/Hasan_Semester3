@@ -23,7 +23,6 @@ if (isset($_POST["simpan"])) {
   }
 }
 
-
 if (isset($_POST["pesan"])) {
   if (pesan($_POST) > 0) {
     echo "<script>

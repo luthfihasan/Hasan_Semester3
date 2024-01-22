@@ -242,7 +242,7 @@ if (isset($_POST["bayar_212279"])) {
                   } else {
                     // tampilkan tombol Detail
                     echo '<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#bayarModal' . $row["212279_id_sewa"] . '"><i class="bi bi-wallet2"></i> Bayar</button>
-<a href="" data-bs-toggle="modal" data-bs-target="#hapusModal' . $row["212279_id_sewa"] . '" class="btn btn-danger"><i class="bi bi-trash"></i> Hapus</a>';
+                          <a href="" data-bs-toggle="modal" data-bs-target="#hapusModal' . $row["212279_id_sewa"] . '" class="btn btn-danger"><i class="bi bi-trash"></i> Hapus</a>';
                   }
                   ?>
 
