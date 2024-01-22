@@ -47,14 +47,14 @@ if (isset($_POST["login"])) {
   <link rel="stylesheet" href="style.css">
 
   <!-- Bootstrap CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-<!-- Bootstrap Icon -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
+  <!-- Bootstrap Icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  </head>
 
-<body class="login bg-warning">
-  <!-- Navbar -->
+  <body class="login bg-warning">
+    <!-- Navbar -->
   <div class="container">
     <nav class="navbar fixed-top bg-danger navbar-expand-lg">
       <div class="container">
@@ -64,7 +64,6 @@ if (isset($_POST["login"])) {
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
       </div>
     </nav>
   </div>
@@ -90,9 +89,7 @@ if (isset($_POST["login"])) {
 
     </form>
   </div>
-
 </body>
-
 </html>
 
 <!-- Sesuaikan skrip jQuery -->

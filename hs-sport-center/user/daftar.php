@@ -8,8 +8,6 @@ if (isset($_POST["daftar"])) {
             <meta http-equiv='refresh' content='2; url= ../login.php'/>  ";
   }
 }
-
-
 ?>
 
 
@@ -27,7 +25,7 @@ if (isset($_POST["daftar"])) {
   <script src="https://unpkg.com/feather-icons"></script>
 
   <!-- Bootstrap Icon -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <style>
     .center {
       position: absolute;

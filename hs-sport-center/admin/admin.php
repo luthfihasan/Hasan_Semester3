@@ -142,7 +142,7 @@ if (isset($_POST["edit"])) {
               <th scope="col">Aksi</th>
             </tr>
           </thead>
-          <tbody class="text">
+          <tbody>
             <?php $i = 1; ?>
             <?php foreach ($admin as $row) : ?>
               <tr>
@@ -210,7 +210,7 @@ if (isset($_POST["edit"])) {
           </tbody>
         </table>
 
-        <ul class="pagination">
+        <ul class="pagination" style="margin-left : 58em";>
           <?php if ($halamanAktif > 1) : ?>
             <li class="page-item">
               <a href="?halaman=<?= $halamanAktif - 1; ?>" class="page-link">Previous</a>

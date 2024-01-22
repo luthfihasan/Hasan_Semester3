@@ -71,7 +71,7 @@ $member = query("SELECT * FROM user_212279 LIMIT $awalData, $jmlHalamanPerData")
             </tr>
           </thead>
           <form action="" method="post">
-            <tbody class="text">
+            <tbody>
               <?php $i = 1; ?>
               <?php foreach ($member as $row) : ?>
                 <tr>
@@ -90,7 +90,7 @@ $member = query("SELECT * FROM user_212279 LIMIT $awalData, $jmlHalamanPerData")
           </form>
         </table>
 
-        <ul class="pagination">
+        <ul class="pagination" style="margin-left : 58em";>
           <?php if ($halamanAktif > 1) : ?>
             <li class="page-item">
               <a href="?halaman=<?= $halamanAktif - 1; ?>" class="page-link">Previous</a>

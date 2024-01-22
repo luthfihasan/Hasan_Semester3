@@ -8,7 +8,7 @@ if ($role !== 'Admin') {
 }
 
 // Pagination
-$jmlHalamanPerData = 3;
+$jmlHalamanPerData = 5;
 $jumlahData = count(query("SELECT * FROM lapangan_212279"));
 $jmlHalaman = ceil($jumlahData / $jmlHalamanPerData);
 
@@ -137,7 +137,9 @@ if (isset($_POST["edit"])) {
               <th scope="col">Aksi</th>
             </tr>
           </thead>
-          <tbody class="text">
+
+          <tbody>
+    
             <?php $i = 1; ?>
             <?php foreach ($lapangan as $row) : ?>
               <tr>
@@ -204,7 +206,7 @@ if (isset($_POST["edit"])) {
           </tbody>
         </table>
 
-        <ul class="pagination">
+        <ul class="pagination" style="margin-left : 58em";>
           <?php if ($halamanAktif > 1) : ?>
             <li class="page-item">
               <a href="?halaman=<?= $halamanAktif - 1; ?>" class="page-link">Previous</a>
@@ -229,5 +231,4 @@ if (isset($_POST["edit"])) {
       </div>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
-
 </html>

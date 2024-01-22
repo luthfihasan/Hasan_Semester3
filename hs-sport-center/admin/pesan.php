@@ -70,7 +70,7 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa LI
         <!-- Konten -->
         <h3 class="judul">Data Pesanan</h3>
         <hr>
-        <a href="export.php" class="btn btn-success mt-3"><i class="bi bi-cloud-arrow-down-fill"></i> Download</a>
+        <a href="export.php" class="btn btn-success mt-3"><i class="bi bi-cloud-arrow-down-fill"></i> PDF</a>
         <table class="table table-hover mt-3">
           <thead class="table-warning">
             <tr>
@@ -85,7 +85,7 @@ JOIN bayar_212279 ON sewa_212279.212279_id_sewa = bayar_212279.212279_id_sewa LI
               <th scope="col"></th>
             </tr>
           </thead>
-          <tbody class="text">
+          <tbody>
             <?php $i = 1; ?>
             <?php foreach ($pesan as $row) : ?>
               <tr>
